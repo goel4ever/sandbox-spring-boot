@@ -13,7 +13,7 @@ spring:
       valueSerializer: org.apache.kafka.common.serialization.StringSerializer
     consumer:
       # default group id, but can be overridden on each listener as needed
-      group-id: segway
+      group-id: api
       keyDeserializer: org.apache.kafka.common.serialization.StringDeserializer
       valueDeserializer: org.apache.kafka.common.serialization.StringDeserializer
   task:
