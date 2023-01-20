@@ -1,0 +1,28 @@
+env: local
+
+server:
+  shutdown: graceful
+
+spring:
+  lifecycle:
+    timeout-per-shutdown-phase: 15s
+  kafka:
+    bootstrapServers: localhost:9092
+    producer:
+      keySerializer: org.apache.kafka.common.serialization.StringSerializer
+      valueSerializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+      # default group id, but can be overridden on each listener as needed
+      group-id: segway
+      keyDeserializer: org.apache.kafka.common.serialization.StringDeserializer
+      valueDeserializer: org.apache.kafka.common.serialization.StringDeserializer
+  task:
+    execution:
+      pool:
+        core-size: 60
+    scheduling:
+      pool:
+        size: 10
+
+kafkaListenerProps:
+  retryBackoffMs: 10000
