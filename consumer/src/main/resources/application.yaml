@@ -17,8 +17,8 @@ spring:
       group-id: api
       keyDeserializer: org.apache.kafka.common.serialization.StringDeserializer
       valueDeserializer: org.apache.kafka.common.serialization.StringDeserializer
-#      max-poll-records: 5
-#      auto-offset-reset: earliest
+      max-poll-records: 5
+      auto-offset-reset: earliest
 #    listener:
 #      type: batch
   task:
