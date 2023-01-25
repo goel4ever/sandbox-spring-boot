@@ -19,6 +19,7 @@ dependencies {
 	// Kotlin standard library
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+	implementation("io.github.microutils:kotlin-logging:1.6.24")
 
 	// Spring Boot basics
 	implementation("org.springframework.boot:spring-boot-starter")
