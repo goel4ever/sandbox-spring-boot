@@ -1,0 +1,16 @@
+env: local
+
+server:
+  shutdown: graceful
+  port: 0
+
+spring:
+  lifecycle:
+    timeout-per-shutdown-phase: 15s
+  task:
+    execution:
+      pool:
+        core-size: 60
+    scheduling:
+      pool:
+        size: 10
